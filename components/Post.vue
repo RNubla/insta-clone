@@ -15,7 +15,7 @@
             </section>
         </div>
         <div class="post-container">
-            <img class="post-content-size" src="assets\images\cat.jpg" alt="cat" srcset="">
+            <img class="post-content-size" src="assets/images/cat.jpg" alt="cat" srcset="">
         </div>
         <div>
             <div>

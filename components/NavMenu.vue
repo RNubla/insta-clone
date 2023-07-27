@@ -12,7 +12,7 @@
                 </a>
             </div>
         </div>
-        <div class="other-icons nav-items-width">
+        <div class="other-icons nav-items-width fixed">
             <div>
                 <div class="icons">
                     <a href="#">
@@ -23,7 +23,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="mobile-hide">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -63,7 +63,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="mobile-hide">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -94,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="setting nav-items-width">
+        <div class="setting nav-items-width mobile-hide">
             <div>
                 <div class="icons">
                     <a href="#">
@@ -106,6 +106,26 @@
                 </div>
             </div>
         </div>
+    </nav>
+    <nav class="nav-mobile">
+        <div class="logo-mobile">
+            <a href="#">
+                <span>
+                    <SVGInstagram />
+                </span>
+            </a>
+        </div>
+        <input type="text">
+        <div>
+            <a href="#">
+                <span>
+                    <SVGNotification />
+                </span>
+            </a>
+        </div>
+    </nav>
+    <nav class="bottom-nav-mobile fixed fixed-width bg-white">
+        <MobileNavMenu />
     </nav>
 </template>
 
@@ -119,76 +139,166 @@ a:active {
     color: black;
 }
 
-.label {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    font-weight: 400;
+.bg-white {
+    background-color: #fff;
 }
 
-.label p {
-    display: none;
-
-}
-
-.icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s;
-}
-
-.icons:hover {
-    background-color: #e6e6e6;
-    border-radius: 6px;
-}
-
-.icons a {
-    padding: 0.8rem;
-
-}
-
-.icons:hover svg {
-    transform: scale(1.2);
-}
-
-.nav-items-width {
+.fixed-width {
     width: 100%;
 }
 
-.setting {
-    justify-content: flex-end;
-}
-
-.logo-instagram {
-    display: none;
-}
-
-.logo-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.logo {
-    height: 92px;
-    flex-shrink: 0;
+.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .nav {
+    display: none;
+}
+
+
+.nav-mobile {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 0.7rem;
-    border-right: 2px solid #e6e6e6;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    border-bottom: 2px solid #e6e6e6;
+    align-items: center;
+}
+
+.bottom-nav-mobile {
+    /* display: flex; */
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    align-items: center;
+    border-top: 2px solid #e6e6e6;
+}
+
+.mobile-hide {
+    display: none;
 }
 
 .other-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.other-icons p {
+    display: none;
+}
+
+.logo {
+    display: none;
+}
+
+.logo-mobile {
     flex-grow: 1;
 }
 
+/* .fixed {
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+} */
 
+
+@media (min-width: 765px) {
+    .fixed {
+        position: inherit;
+        bottom: inherit;
+        left: inherit;
+        transform: inherit;
+    }
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .label {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        font-weight: 400;
+    }
+
+    .label p {
+        display: none;
+
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+    }
+
+    .icons:hover {
+        background-color: #e6e6e6;
+        border-radius: 6px;
+    }
+
+    .icons a {
+        padding: 0.8rem;
+
+    }
+
+    .icons:hover svg {
+        transform: scale(1.2);
+    }
+
+    .nav-items-width {
+        width: 100%;
+    }
+
+    .setting {
+        justify-content: flex-end;
+    }
+
+    .logo-instagram {
+        display: none;
+    }
+
+    .logo-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .logo {
+        display: block;
+        height: 92px;
+        flex-shrink: 0;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem 0.7rem;
+        border-right: 2px solid #e6e6e6;
+    }
+
+    .mobile-hide {
+        display: block;
+    }
+
+    .other-icons {
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
 
 
 @media (min-width: 1250px) {
@@ -207,6 +317,10 @@ a:active {
 
     .icons {
         justify-content: flex-start;
+    }
+
+    .other-icons {
+        align-items: flex-start;
     }
 }
 </style>
