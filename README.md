@@ -1,4 +1,14 @@
-# Nuxt 3 Minimal Starter
+# Instagram Clone
+
+This is an instagram clone the practice css. I may integrate a backend, but we'll see how it goes. This can also be build using Tauri so that it can be run as a native application.
+
+## Tauri Build
+
+```
+npm run tauri build
+```
+
+As a note for myself or anyone else, to make nuxt work with tauri, you must modify the following file `nuxt.config.ts` and add the following: ` ssr: false`
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
