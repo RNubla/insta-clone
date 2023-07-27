@@ -219,9 +219,11 @@ a:active {
         transform: inherit;
     }
 
-    .nav-mobile {
+    .nav-mobile,
+    .bottom-nav-mobile {
         display: none;
     }
+
 
     .label {
         display: flex;

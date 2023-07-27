@@ -51,7 +51,7 @@
 }
 
 .post {
-    width: 470px;
+    max-width: 470px;
     padding-bottom: 2.5rem;
     border-bottom: 2px solid #e6e6e6;
 }
