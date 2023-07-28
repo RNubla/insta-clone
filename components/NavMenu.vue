@@ -115,7 +115,7 @@
                 </span>
             </a>
         </div>
-        <input type="text">
+        <input class="search" type="text" placeholder="Search">
         <div>
             <a href="#">
                 <span>
@@ -137,6 +137,14 @@ a:hover,
 a:active {
     text-decoration: none;
     color: black;
+}
+
+.search {
+    padding: 0.6rem;
+    margin-right: 1rem;
+    border: none;
+    background: #e6e6e6;
+    border-radius: 4px;
 }
 
 .btn {
