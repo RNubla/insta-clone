@@ -19,7 +19,7 @@
         <div class="post-container">
             <img class="post-content-size" src="assets/images/cat.jpg" alt="cat" srcset="">
         </div>
-        <div>
+        <div class="px">
             <div class="flex actions">
                 <div class="flex grow post-actions">
                     <button class="flex justiify-start items-center">
@@ -40,13 +40,15 @@
                 <p class="font-600">342 likes</p>
             </div>
         </div>
-        <p>
-            <a href="#"><span class="font-600">
-                    cutekitty
-                </span>
-            </a>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium omnis quasi vel nisi possimus tenetur.
-        </p>
+        <div class="px">
+            <p>
+                <a href="#"><span class="font-600">
+                        cutekitty
+                    </span>
+                </a>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium omnis quasi vel nisi possimus tenetur.
+            </p>
+        </div>
     </article>
 </template>
 
@@ -57,6 +59,10 @@ a:hover,
 a:active {
     text-decoration: none;
     color: black;
+}
+
+.px {
+    padding: 0 1rem;
 }
 
 .font-600 {
@@ -148,5 +154,12 @@ a:active {
 
 .flex-end {
     justify-content: flex-end;
+}
+
+@media (min-width: 765px) {
+    .px {
+        padding: 0;
+    }
+
 }
 </style>
