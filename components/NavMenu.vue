@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="other-icons nav-items-width fixed">
-            <div>
+            <div class="btn">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -23,7 +23,7 @@
                     </a>
                 </div>
             </div>
-            <div class="mobile-hide">
+            <div class="mobile-hide btn">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -33,7 +33,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="btn">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -43,7 +43,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="btn">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -53,7 +53,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="btn">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -63,7 +63,7 @@
                     </a>
                 </div>
             </div>
-            <div class="mobile-hide">
+            <div class="mobile-hide btn">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -73,7 +73,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="btn">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -83,7 +83,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="btn">
                 <div class="icons">
                     <a href="#">
                         <span class="label">
@@ -94,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <div class="setting nav-items-width mobile-hide">
+        <div class="setting nav-items-width mobile-hide btn">
             <div>
                 <div class="icons">
                     <a href="#">
@@ -137,6 +137,10 @@ a:hover,
 a:active {
     text-decoration: none;
     color: black;
+}
+
+.btn {
+    width: 100%;
 }
 
 .bg-white {
