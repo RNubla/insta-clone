@@ -2,11 +2,13 @@
     <article class="post">
         <div class="flex flex-col">
             <section class="flex justify-start items-center post-top">
-                <div>img</div>
+                <div class="profile-container">
+                    <img class="profile-picture" src="assets/images/cat.jpg" alt="" srcset="">
+                </div>
                 <div class="grow">
-                    <div class="flex flex-col">
-                        <a href="#"><span>author name</span></a>
-                        <a href="#">location</a>
+                    <div class="flex flex-col author">
+                        <a href="#"><span class="font-600">cutekitty</span></a>
+                        <a class="location" href="#">New York, New York</a>
                     </div>
                 </div>
                 <div class="flex-end">
@@ -18,24 +20,91 @@
             <img class="post-content-size" src="assets/images/cat.jpg" alt="cat" srcset="">
         </div>
         <div>
-            <div>
-                <div>like</div>
-                <div>comment</div>
-                <div>share</div>
-                <div>save</div>
+            <div class="flex actions">
+                <div class="flex grow post-actions">
+                    <button class="flex justiify-start items-center">
+                        <SVGLike />
+                    </button>
+                    <button class="flex justify-start items-center">
+                        <SVGComment />
+                    </button>
+                    <button class="flex justify-start items-center">
+                        <SVGSharePost />
+                    </button>
+                </div>
+                <div>
+                    <SVGSave />
+                </div>
             </div>
-            <div>
-                <div>user-photo</div>
-                <p>like count</p>
+            <div class="likes">
+                <p class="font-600">342 likes</p>
             </div>
         </div>
         <p>
-            author's description
+            <a href="#"><span class="font-600">
+                    cutekitty
+                </span>
+            </a>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium omnis quasi vel nisi possimus tenetur.
         </p>
     </article>
 </template>
 
 <style scoped>
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.font-600 {
+    font-weight: 600;
+}
+
+.likes {
+    margin-bottom: 1rem;
+}
+
+.actions {
+    margin: 1rem 0;
+}
+
+.author {
+    gap: 0.4rem;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.post-actions {
+    gap: 1rem;
+}
+
+.post-actions button,
+.post-actions button:focus {
+    outline: none;
+    background: transparent;
+    border: none;
+}
+
+.location {
+    font-size: 0.7rem
+}
+
+.profile-picture {
+    object-fit: cover;
+    width: 100%;
+    border: 2px solid #e6e6e6;
+    border-radius: 50%;
+    max-width: 2.7rem;
+
+}
+
+.profile-container {}
+
 .post-container {
     margin: 0 0 1rem 0;
 }
